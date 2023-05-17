@@ -1,4 +1,12 @@
+@use '../../styles/partials/mixins';
 
-// @import '../../styles/partials/mixins';
-// import '../../styles/partials/fonts';
+.header{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    &__logo-container {
+        padding-top: 0.8rem;
+    }
+}

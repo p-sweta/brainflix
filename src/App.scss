@@ -1,8 +1,14 @@
 
-@use '/Users/spmac/Documents/Brainstation-Software-Engineering-Bootcamp/Week 6/BrainFlix Project/sweta-parmar-brainflix/src/styles/partials/_mixins.scss' as *;
+@use './styles/partials/_mixins.scss' as *;
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    font-family: avenir, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+  }
