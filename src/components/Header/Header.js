@@ -1,8 +1,7 @@
 import "./Header.scss";
 import logo from "../../assets/logo/BrainFlix-logo.svg";
-import search from "../../assets/icons/search.svg";
-import avatar from "../../assets/images/Mohan-muruge.jpg";
-import upload from "../../assets/icons/upload.svg";
+import SearchBar from "../SearchBar/SearchBar";
+
 
 const Header = () => {
   return (
@@ -10,7 +9,7 @@ const Header = () => {
       <div className="header__logo-container">
         <img className="header__logo" src={logo} alt="" />
       </div>
-      
+      <SearchBar /> 
     </header>
   );
 };
