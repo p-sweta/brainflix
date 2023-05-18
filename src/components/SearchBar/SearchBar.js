@@ -10,9 +10,9 @@ const SearchBar = () => {
         <div className="searchbar__container">
           <div className="searchbar__icon-container">
             <img className="searchbar__search-icon" src={search} alt="" />
-            <label for="searchbar"></label>
+            <label htmlFor="searchbar"></label>
             <input
-              class="searchbar__input"
+              className="searchbar__input"
               type="text"
               id="searchBar"
               placeholder="Search"
@@ -21,7 +21,7 @@ const SearchBar = () => {
         </div>
       </form>
       <button className="searchbar__upload-container">
-        <img className="searchbar__upload-icon" src={upload} alt="" />
+        <img className="searchbar__upload-icon" src={upload} alt="upload-icon" />
         <h3 className="searchbar__upload-text">UPLOAD</h3>
       </button>
       <img
