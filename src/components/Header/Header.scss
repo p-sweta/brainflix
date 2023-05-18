@@ -2,12 +2,12 @@
 @use '../../styles/partials/mixins' as *;
 
 .header{
-    padding: 0 1rem;
+    @include page-padding;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    
     &__logo-container {
+        align-self: center;
         padding-top: 0.8rem;
     }
     @include tablet {

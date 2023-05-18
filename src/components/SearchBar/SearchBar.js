@@ -5,7 +5,6 @@ import upload from "../../assets/icons/upload.svg";
 
 const SearchBar = () => {
   return (
-    
     <div className="searchbar">
       <form className="searchbar__form">
         <div className="searchbar__container">
@@ -30,8 +29,7 @@ const SearchBar = () => {
         src={avatar}
         alt="mohan-muruge-avatar"
       />
-      </div>
-    
+    </div>
   );
 };
 
