@@ -8,8 +8,8 @@ const VideoDetails = (props) => {
             <h1 className="details__heading">{props.video.title}</h1>
             <div className="details__container">
                 <div className="details__subcontainer-left">
-                    <h3 className="details__subheading">{props.video.channel}</h3>
-                    <p className="details__date">07 /11 / 2021</p>
+                    <h3 className="details__subheading">By {props.video.channel}</h3>
+                    <p className="details__date">07/11/2021</p>
                 </div>
                 <div className="details__subcontainer-right">
                     <div className="details__views-container">
