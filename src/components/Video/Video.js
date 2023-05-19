@@ -1,5 +1,5 @@
 import "./Video.scss";
-import play from "../../assets/icons/play.svg";
+// import play from "../../assets/icons/play.svg";
 
 const Video = (props) => {
   return (
