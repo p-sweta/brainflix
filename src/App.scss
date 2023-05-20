@@ -1,5 +1,5 @@
-
-@use './styles/partials/_mixins.scss' as *;
+@use "./styles/partials/variables.scss" as *;
+@use "./styles/partials/mixins.scss" as *;
 
 *,
 *::before,
@@ -8,7 +8,30 @@
 }
 
 body {
-    margin: 0;
-    font-family: avenir, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 400;
+  margin: 0;
+  font-family: avenir, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+.btn {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 5vw;
+  background-color: $brainflix-blue;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.25rem;
   }
+
+  &__text {
+    font-size: 0.72rem;
+    padding: 1vw 35.7vw 1vw 0;
+    color: $white;
+  }
+}

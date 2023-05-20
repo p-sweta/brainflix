@@ -1,3 +1,78 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/fonts' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.form {
+  display: flex;
+  padding-top: 1.5vw;
+  justify-content: space-between;
+
+  &__image-container {
+    max-width: 2.25rem;
+    max-width: 2.25rem;
+    padding-top: 7vw;
+  }
+
+  &__image {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  &__container {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    padding: 0.5vw 0 0 0;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: $silver;
+  }
+
+  &__fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__label {
+    display: none;
+  }
+
+
+  &__comment {
+    width: 100%;
+    background-color: $alabaster;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: $mercury 1px solid;
+    margin-top: -4.5vw;
+    resize: none;
+    height: 6rem;
+
+    &::placeholder {
+      color: $brainflix-black;
+      font-family: avenir;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__button {
+    margin: 4vw 0;
+    padding: 1vw 2.2vw 0 2.2vw;
+    height: 2.2rem;
+  }
+
+  &__comment-text {
+    padding: 0 25vw 0 12vw;
+    margin: 0;
+    font-size: 0.76rem;
+  }
+}

@@ -2,3 +2,12 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/fonts' as *;
 
+.comments {
+  @include page-padding;
+
+  &__count {
+    padding-top: 1vw;
+    font-weight: 700;
+    font-size: 0.82rem;
+  }
+}
