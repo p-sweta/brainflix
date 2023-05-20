@@ -1,3 +1,52 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/fonts' as *;
+
+.comment {
+    margin: 0 0 5vw 0;
+  border-top: 1px solid $mercury;
+
+  &__container {
+    display: flex;
+    border-bottom: 1px solid $mercury;
+    margin-bottom: -0.06rem;
+    position: relative;
+  }
+
+  &__image-placeholder {
+    border-radius: 50%;
+    background-color: $mercury;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-top: 4.5vw;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+  }
+
+  &__heading {
+    font-family: avenir;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding-left: 5vw;
+    margin: 4.5vw 0 0 0;
+  }
+
+  &__date {
+    color: $silver;
+    position: absolute;
+    right: 0;
+    font-size: 0.8rem;
+    margin-bottom: 0vw;
+  }
+
+  &__comment {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 2.5vw 0 3.7vw 4.5vw;
+  }
+}

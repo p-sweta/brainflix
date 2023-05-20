@@ -11,7 +11,7 @@ const Main = () => {
     <main className="main">
       <Video video={videosData[0]} />
       <VideoDetails video={videosData[0]} />
-      <Comments />
+      <Comments video={videosData[0]} />
     </main>
   );
 };
