@@ -3,6 +3,7 @@ import Video from "../Video/Video";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import videosData from "../../data/video-details.json";
 import Comments from "../Comments/Comments";
+import SideVideosList from "../SideVideosList/SideVideosList";
 
 const Main = () => {
   //   console.log(videos[0]);
@@ -12,6 +13,7 @@ const Main = () => {
       <Video video={videosData[0]} />
       <VideoDetails video={videosData[0]} />
       <Comments video={videosData[0]} />
+      <SideVideosList />
     </main>
   );
 };
