@@ -13,7 +13,7 @@ const Main = () => {
       <Video video={videosData[0]} />
       <VideoDetails video={videosData[0]} />
       <Comments video={videosData[0]} />
-      <SideVideosList />
+      <SideVideosList data={videosData}/>
     </main>
   );
 };
