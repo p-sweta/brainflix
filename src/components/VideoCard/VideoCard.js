@@ -2,7 +2,7 @@ import "./VideoCard.scss";
 
 const VideoCard = (props) => {
   return (
-    <div className="sideVideo">
+    <div className="sideVideo" onClick={props.handleSelect}>
       <div className="sideVideo__image-container">
         <img
           className="sideVideo__image"

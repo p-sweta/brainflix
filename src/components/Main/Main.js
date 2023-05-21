@@ -13,18 +13,21 @@ const Main = () => {
   const [currVideo, setCurrVideo] = useState(videosData[0]);
 
   const changeCurrVideo = (id) => {
-    setCurrVideo(id);
-  }
+    const current = videosData.find((video) => video.id === id);
+    setCurrVideo(current);
+  };
 
   return (
     <main className="main">
-      <Video currVideo = { currVideo } />
-      <VideoDetails currVideo = { currVideo } />
-      <Comments currVideo = { currVideo } />
-      <SideVideosList 
-      data = { videosData }
-      currVideo = { currVideo }
-      changeCurrVideo = { changeCurrVideo }/>
+      <Video currVideo={currVideo} />
+      <VideoDetails currVideo={currVideo} />
+      <Comments currVideo={currVideo}  />
+      <SideVideosList
+        data={videosData}
+        currVideo={currVideo}
+        setCurrVideo={setCurrVideo}
+        changeCurrVideo={changeCurrVideo}
+      />
     </main>
   );
 };

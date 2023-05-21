@@ -1,7 +1,8 @@
 import "./SideVideosList.scss";
 import VideoCard from "../VideoCard/VideoCard";
 
-const SideVideosList = ({ currVideo, data, changeCurrVideo }) => {
+const SideVideosList = ({ currVideo, data, changeCurrVideo, setCurrVideo }) => {
+    
   console.log(data);
   return (
     <aside className="videolist">
@@ -14,6 +15,7 @@ const SideVideosList = ({ currVideo, data, changeCurrVideo }) => {
               title={video.title}
               channel={video.channel}
               image={video.image}
+              handleSelect={() => changeCurrVideo(video.id)}
             />
           );
         }
