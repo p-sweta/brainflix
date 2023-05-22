@@ -29,12 +29,27 @@ body {
   &__icon {
     width: 1.5rem;
     height: 1.25rem;
+
+    @include tablet {
+      padding: 0;
+      margin-right: 3vw;
+    }
   }
 
   &__text {
     font-size: 0.72rem;
     padding: 1vw 35.7vw 1vw 0;
     color: $white;
+
+    @include tablet {
+      padding: 0 2vw 0 0;
+    }
+  }
+
+  @include tablet {
+    margin-top: 2vw;
+    width: auto;
+    // padding: 0;
   }
 }
 
