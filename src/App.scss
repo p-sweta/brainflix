@@ -48,16 +48,11 @@ body {
     @include tablet {
       padding: 0 1.6vw;
     }
-
-    // @include desktop {
-    //   padding: 0 2vw 0 0;
-    // }
   }
 
   @include tablet {
     margin-top: 2vw;
     width: auto;
-    // padding: 0;
   }
 
   @include desktop {
