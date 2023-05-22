@@ -37,3 +37,11 @@ body {
     color: $white;
   }
 }
+
+.section {
+  &__heading {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: $silver;
+  }
+}

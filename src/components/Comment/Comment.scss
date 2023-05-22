@@ -3,7 +3,7 @@
 @use '../../styles/partials/fonts' as *;
 
 .comment {
-    margin: 0 0 5vw 0;
+    margin: 0;
   // border-top: 1px solid $mercury;
 
   &__container {
@@ -47,6 +47,6 @@
     font-size: 0.8rem;
     line-height: 1.4;
     margin: 0;
-    padding: 2.5vw 0 3.7vw 4.5vw;
+    padding: 2.5vw 0 4.2vw 4.5vw;
   }
 }

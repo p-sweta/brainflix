@@ -6,7 +6,7 @@ const SideVideosList = ({ currVideo, data, changeCurrVideo, setCurrVideo }) => {
   console.log(data);
   return (
     <aside className="videolist">
-      <h3 className="videolist__heading">NEXT VIDEOS</h3>
+      <h3 className="videolist__heading section__heading">NEXT VIDEOS</h3>
       {data.map((video) => {
         if (video !== currVideo) {
           return (
