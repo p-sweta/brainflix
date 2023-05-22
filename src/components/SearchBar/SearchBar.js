@@ -21,7 +21,11 @@ const SearchBar = () => {
         </div>
       </form>
       <button className="searchbar__upload-container btn">
-        <img className="searchbar__upload-icon btn__icon" src={upload} alt="upload-icon" />
+        <img
+          className="searchbar__upload-icon btn__icon"
+          src={upload}
+          alt="upload-icon"
+        />
         <h3 className="searchbar__upload-text btn__text">UPLOAD</h3>
       </button>
       <img

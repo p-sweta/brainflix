@@ -1,31 +1,30 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.header{
-    @include page-padding;
-    display: flex;
-    flex-direction: column;
-    
-    &__logo-container {
-        align-self: center;
-        padding-top: 0.8rem;
+.header {
+  @include page-padding;
+  display: flex;
+  flex-direction: column;
 
-        @include tablet {
-            padding: 0;
-            margin: 2.5vw 0 0 -0.5vw;
-        }
+  &__logo-container {
+    align-self: center;
+    padding-top: 0.8rem;
 
-        @include desktop {
-            margin-top: 1.2vw;
-        }
-    }
     @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
+      padding: 0;
+      margin: 2.5vw 0 0 -0.5vw;
     }
 
     @include desktop {
-        padding: 0 10.6vw;
+      margin-top: 1.2vw;
     }
-   
+  }
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    padding: 0 10.6vw;
+  }
 }

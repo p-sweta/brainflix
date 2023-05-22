@@ -63,7 +63,7 @@
     padding: 0;
     margin: 0;
 
-    @include tablet{
+    @include tablet {
       flex-direction: row;
       justify-content: space-between;
       padding: 0;
@@ -112,7 +112,7 @@
   &__comment-container {
     display: flex;
     margin-top: 2vw;
-    
+
     @include tablet {
       padding: 0;
       margin-top: 0.8vw;
@@ -145,7 +145,7 @@
   }
 
   &__comment-icon {
-    @include tablet{
+    @include tablet {
       padding: 0 0 0 0.8vw;
       margin: 0;
     }
@@ -161,7 +161,7 @@
     margin: 0;
     font-size: 0.76rem;
 
-    @include tablet{
+    @include tablet {
       padding: 0 2.5vw;
     }
 
@@ -170,7 +170,7 @@
     }
   }
 
-  @include tablet{
+  @include tablet {
     padding: 0.8vw 0 0vw 0;
     justify-content: space-between;
     // column-gap: 1.4rem;

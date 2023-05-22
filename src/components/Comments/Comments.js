@@ -2,20 +2,16 @@ import "./Comments.scss";
 import CommentsForm from "../CommentsForm/CommentsForm";
 import Comment from "../Comment/Comment";
 
-const Comments = ({currVideo}) => {
-    console.log(currVideo.comments);
+const Comments = ({ currVideo }) => {
   return (
     <div className="comments">
       <h3 className="comments__count">{currVideo.comments.length} Comments</h3>
       <CommentsForm />
       <section className="comments__comments-list">
-      {currVideo.comments.map((comment) => (
-        <Comment 
-            key={comment.id} 
-            comment={comment} 
-        />)
-        )}
-        </section>
+        {currVideo.comments.map((comment) => (
+          <Comment key={comment.id} comment={comment} />
+        ))}
+      </section>
     </div>
   );
 };

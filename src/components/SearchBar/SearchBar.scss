@@ -1,113 +1,110 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .searchbar {
-    position: relative;
+  position: relative;
+
+  @include tablet {
+    width: 70%;
+    display: flex;
+    padding: 0;
+  }
+
+  &__container {
+    @include tablet {
+      width: auto;
+      padding: 0;
+      margin-left: 1vw;
+    }
+  }
+
+  &__form {
+    @include desktop {
+      width: 43%;
+    }
+  }
+
+  &__icon-container {
+    width: 82%;
+    background-color: $alabaster;
+    height: 2.25rem;
+    border-radius: 4px;
+    border: $mercury 1px solid;
+    margin: 4vw 0 4.5vw 0;
+    display: flex;
 
     @include tablet {
-        width: 70%;
-        display: flex;
-        padding: 0;
-    }
-
-    &__container {
-        @include tablet {
-            width: auto;
-            padding: 0;
-            margin-left: 1vw;
-        }
-        
-    }
-
-    &__form {
-        @include desktop {
-            width: 43%;
-        }
-    }
-
-    &__icon-container {
-        width: 82%;
-        background-color: $alabaster;
-        height: 2.25rem;
-        border-radius: 4px;
-        border: $mercury 1px solid;
-        margin: 4vw 0 4.5vw 0;
-        display: flex;   
-
-        @include tablet {
-            width: 100%;
-            margin: 2vw 0 0 0;
-            height: 2.5rem;
-            padding: 0 8vw 0 0;
-        }
-
-        @include desktop {
-            width: 80%;
-            margin: 1.2vw 0 0 2vw;
-        }
-    }
-
-    &__search-icon {
-        width: 1rem;
-        margin: 0 2vw 0 3vw;
-
-        @include tablet {
-            margin: 0 1vw 0 1vw;
-            padding: 0;
-        }
-
-    }
-
-    &__input {
-        width: 100%;
-        border: none;
-        background-color: $alabaster;
-
-        &::placeholder {
-            font-size: 0.71rem;
-            color: $brainflix-black;
-
-            @include desktop {
-                font-size: 0.77rem;
-            }
-        }
-    }
-
-    &__upload-container {
-        @include tablet {
-            margin-left: 3vw;
-            padding-left: 0.7vw;
-        }
-
-        @include desktop {
-            margin: 1.2vw 6.5vw 0 0;
-        }
-    }
-
-    &__avatar {
-        border-radius: 50%;
-        width: 2.25rem;
-        height: 2.25rem;
-        object-fit: cover;
-        position: absolute;
-        right: 0;
-        top: 4vw;
-
-        @include tablet {
-            padding: 0;
-            width: 2.5rem;
-            height: 2.5rem;
-            top: 2vw;
-        }
-
-        @include desktop {
-            top: 1.2vw;
-            right: 0.5vw;
-        }
+      width: 100%;
+      margin: 2vw 0 0 0;
+      height: 2.5rem;
+      padding: 0 8vw 0 0;
     }
 
     @include desktop {
-        justify-content: flex-end;
+      width: 80%;
+      margin: 1.2vw 0 0 2vw;
+    }
+  }
+
+  &__search-icon {
+    width: 1rem;
+    margin: 0 2vw 0 3vw;
+
+    @include tablet {
+      margin: 0 1vw 0 1vw;
+      padding: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    background-color: $alabaster;
+
+    &::placeholder {
+      font-size: 0.71rem;
+      color: $brainflix-black;
+
+      @include desktop {
+        font-size: 0.77rem;
+      }
+    }
+  }
+
+  &__upload-container {
+    @include tablet {
+      margin-left: 3vw;
+      padding-left: 0.7vw;
     }
 
+    @include desktop {
+      margin: 1.2vw 6.5vw 0 0;
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 4vw;
+
+    @include tablet {
+      padding: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      top: 2vw;
+    }
+
+    @include desktop {
+      top: 1.2vw;
+      right: 0.5vw;
+    }
+  }
+
+  @include desktop {
+    justify-content: flex-end;
+  }
 }

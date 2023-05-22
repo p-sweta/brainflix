@@ -11,7 +11,9 @@ const CommentsForm = () => {
         </div>
 
         <div className="form__container">
-          <legend className="form__heading section__heading">JOIN THE CONVERSATION</legend>
+          <legend className="form__heading section__heading">
+            JOIN THE CONVERSATION
+          </legend>
           <fieldset className="form__fieldset">
             <div className="form__comment-container">
               <label className="form__label" htmlFor="comment">
