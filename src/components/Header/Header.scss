@@ -14,10 +14,18 @@
             padding: 0;
             margin: 2.5vw 0 0 -0.5vw;
         }
+
+        @include desktop {
+            margin-top: 1.2vw;
+        }
     }
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    @include desktop {
+        padding: 0 10.6vw;
     }
    
 }

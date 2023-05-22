@@ -8,13 +8,17 @@
 
   &__container {
     display: flex;
-    border-bottom: 1px solid $mercury;
+    border-top: 1px solid $mercury;
     margin-bottom: -0.06rem;
     position: relative;
 
     @include tablet {
       padding: 0;
       margin-bottom: 0;
+    }
+
+    @include desktop {
+      padding: 0 1vw;
     }
   }
 
@@ -30,6 +34,10 @@
       margin-top: 3vw;
       width: 40px;
       height: 40px;
+    }
+
+    @include desktop {
+      margin-top: 2vw;
     }
   }
 
@@ -56,6 +64,11 @@
       margin-top: 2.6vw;
       padding: 0.8vw 0 0 2.4vw;
     }
+
+    @include desktop {
+      margin-top: 2vw;
+      padding: 0 0 0 2.8vw;
+    }
   }
 
   &__date {
@@ -69,6 +82,11 @@
       padding: 1.5vw 0 0 0;
       font-size: 0.85rem;
     }
+
+    @include desktop {
+      margin-top: 2vw;
+      padding: 0 2vw 0 0;
+    }
   }
 
   &__comment {
@@ -81,6 +99,10 @@
       font-size: 0.87rem;
       padding: 0.9vw 0 2.8vw 2.6vw;
       line-height: 1.6;
+    }
+
+    @include desktop {
+      padding: 0.5vw 1vw 1.75vw 2.8vw;
     }
   }
 

@@ -16,6 +16,11 @@
     @include tablet {
       padding: 2.7vw 0 0 0;
     }
+
+    @include desktop {
+      padding-top: 1.4vw;
+      margin: 0 1vw;
+    }
   }
 
   &__image {
@@ -39,6 +44,10 @@
     @include tablet {
       padding: 0;
       width: 91.5%;
+    }
+
+    @include desktop {
+      margin-left: 2.2vw;
     }
   }
 
@@ -109,6 +118,11 @@
       margin-top: 0.8vw;
       width: 80%;
     }
+
+    @include desktop {
+      margin-top: 0.25vw;
+      width: 67%;
+    }
   }
 
   &__button {
@@ -123,12 +137,22 @@
       margin: 0.6vw 0 3.8vw 0;
       justify-content: flex-start;
     }
+
+    @include desktop {
+      width: 25%;
+      margin: 0.25vw 2vw 0 0;
+    }
   }
 
   &__comment-icon {
     @include tablet{
       padding: 0 0 0 0.8vw;
       margin: 0;
+    }
+
+    @include desktop {
+      padding: 0;
+      width: 15%;
     }
   }
 
@@ -138,7 +162,11 @@
     font-size: 0.76rem;
 
     @include tablet{
-      padding: 0 0 0 2.2vw;
+      padding: 0 2.5vw;
+    }
+
+    @include desktop {
+      padding: 0 1vw;
     }
   }
 
@@ -146,5 +174,10 @@
     padding: 0.8vw 0 0vw 0;
     justify-content: space-between;
     // column-gap: 1.4rem;
+  }
+
+  @include desktop {
+    padding-bottom: 1.6vw;
+    border: none;
   }
 }

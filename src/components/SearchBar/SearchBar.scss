@@ -16,6 +16,13 @@
             padding: 0;
             margin-left: 1vw;
         }
+        
+    }
+
+    &__form {
+        @include desktop {
+            width: 43%;
+        }
     }
 
     &__icon-container {
@@ -33,6 +40,11 @@
             height: 2.5rem;
             padding: 0 8vw 0 0;
         }
+
+        @include desktop {
+            width: 80%;
+            margin: 1.2vw 0 0 2vw;
+        }
     }
 
     &__search-icon {
@@ -40,9 +52,10 @@
         margin: 0 2vw 0 3vw;
 
         @include tablet {
-            margin: 0 0.5vw 0 2vw;
+            margin: 0 1vw 0 1vw;
             padding: 0;
         }
+
     }
 
     &__input {
@@ -53,6 +66,10 @@
         &::placeholder {
             font-size: 0.71rem;
             color: $brainflix-black;
+
+            @include desktop {
+                font-size: 0.77rem;
+            }
         }
     }
 
@@ -60,6 +77,10 @@
         @include tablet {
             margin-left: 3vw;
             padding-left: 0.7vw;
+        }
+
+        @include desktop {
+            margin: 1.2vw 6.5vw 0 0;
         }
     }
 
@@ -76,9 +97,17 @@
             padding: 0;
             width: 2.5rem;
             height: 2.5rem;
-            right: 0;
             top: 2vw;
         }
+
+        @include desktop {
+            top: 1.2vw;
+            right: 0.5vw;
+        }
+    }
+
+    @include desktop {
+        justify-content: flex-end;
     }
 
 }

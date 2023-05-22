@@ -18,6 +18,11 @@
             margin-top: 2.8vw;
             font-size: 2rem;
         }
+
+        @include desktop {
+            margin-top: 2.3vw;
+            font-size: 2rem;
+        }
     }
 
     &__container {
@@ -52,6 +57,11 @@
             column-gap: 2.1rem;
             padding: 0.1rem 2.3rem 0 1.5rem;
         }  
+
+        @include desktop {
+            column-gap: 1.6rem;
+            padding: 0.1rem 1.5rem 0 2rem;
+        }
     }
 
     &__subheading {
@@ -61,6 +71,10 @@
             margin: 1.5vw 0 1.3vw 0;
             padding: 0;
             font-size: 0.9rem;
+        }
+
+        @include desktop {
+            margin: 1vw 0 0.7vw 0;
         }
     }
 
@@ -72,6 +86,10 @@
             padding: 0;
             margin: 1.5vw 0 1.3vw 0;
             font-size: 0.75rem;
+        }
+
+        @include desktop {
+            margin: 1vw 0 0.7vw 0;
         }
     }
 
@@ -97,6 +115,11 @@
             padding: 1.2vw 0 0 0;
             border-top: 1px solid $mercury;
         }
+
+        @include desktop {
+            margin-right: 0;
+            padding-top: 0.7vw;
+        }
     }
 
     &__description {
@@ -107,6 +130,9 @@
             padding: 0;
             font-size: 0.87rem;
             line-height: 1.58;
+        }
+        @include desktop {
+            padding-right: 1.2rem;
         }
     }
 

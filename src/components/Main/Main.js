@@ -20,8 +20,8 @@ const Main = () => {
   return (
     <main className="main">
       <Video currVideo={currVideo} />
-      <div>
-      <div>
+      <div className="details-container">
+      <div className="details-container__left">
       <VideoDetails currVideo={currVideo} />
       <Comments currVideo={currVideo}  />
       </div>
