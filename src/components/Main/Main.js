@@ -20,14 +20,18 @@ const Main = () => {
   return (
     <main className="main">
       <Video currVideo={currVideo} />
+      <div>
+      <div>
       <VideoDetails currVideo={currVideo} />
       <Comments currVideo={currVideo}  />
+      </div>
       <SideVideosList
         data={videosData}
         currVideo={currVideo}
         setCurrVideo={setCurrVideo}
         changeCurrVideo={changeCurrVideo}
       />
+      </div>
     </main>
   );
 };
