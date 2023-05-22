@@ -9,5 +9,11 @@
     padding-top: 1vw;
     font-weight: 700;
     font-size: 0.82rem;
+
+    @include tablet {
+      padding: 0;
+      margin-top: 4.5vw;
+      font-size: 0.9rem;
+    }
   }
 }

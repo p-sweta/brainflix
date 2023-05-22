@@ -23,6 +23,7 @@ const CommentsForm = () => {
                 name="comment"
                 id="comment"
                 placeholder="Add a new comment"
+                required
               ></textarea>
             </div>
             <button type="submit" className="form__button btn">
