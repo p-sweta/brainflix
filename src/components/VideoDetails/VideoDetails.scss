@@ -12,6 +12,12 @@
         line-height: 1.35;
         padding-bottom: 5vw;
         border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            border: none;
+            margin-top: 2.8vw;
+            font-size: 2rem;
+        }
     }
 
     &__container {
@@ -19,29 +25,64 @@
         column-gap: 4.8rem;
         padding-bottom: 1vw;
         border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            padding: 0;
+            justify-content: space-between;
+            border: none;
+        }
     }
 
     &__subcontainer-left {
         padding-top: 0.25rem;
+
+        @include tablet {
+            display: flex;
+            align-items: baseline;
+            column-gap: 2.1rem;
+        }
     }
 
     &__subcontainer-right {
         padding-top: 0.25rem;
-        
+
+        @include tablet {
+            display: flex;
+            align-items: baseline;
+            column-gap: 2.1rem;
+            padding: 0.1rem 2.3rem 0 1.5rem;
+        }  
     }
 
     &__subheading {
         font-size: 0.8rem;
+
+        @include tablet {
+            margin: 1.5vw 0 1.3vw 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
     }
 
     &__date, &__number {
         font-size: 0.8rem;
         color: $silver;
+
+        @include tablet {
+            padding: 0;
+            margin: 1.5vw 0 1.3vw 0;
+            font-size: 0.75rem;
+        }
     }
 
     &__views-container, &__likes-container {
         display: flex;
         column-gap: 0.6rem;
+
+        @include tablet {
+            padding: 0;
+            column-gap: 0.35rem;
+        }
     }
 
     &__likes-container {
@@ -50,10 +91,26 @@
 
     &__description-container {
         padding-top: 1vw;
+
+        @include tablet {
+            margin: 0 5vw;
+            padding: 1.2vw 0 0 0;
+            border-top: 1px solid $mercury;
+        }
     }
 
     &__description {
         font-size: 0.805rem;
         line-height: 1.4;
+
+        @include tablet {
+            padding: 0;
+            font-size: 0.87rem;
+            line-height: 1.6;
+        }
+    }
+
+    @include tablet {
+        padding: 0;
     }
 }
