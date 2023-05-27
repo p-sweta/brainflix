@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import HomePage from './pages/HomePage/HomePage';
 import UploadPage from './pages/UploadPage/UploadPage';
-import VideoDetailspage from './pages/VideoDetailspage/VideoDetailspage';
 
 function App() {
   return (

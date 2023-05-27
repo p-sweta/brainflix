@@ -4,7 +4,9 @@ import VideoDetails from "../VideoDetails/VideoDetails";
 import videosData from "../../data/video-details.json";
 import Comments from "../Comments/Comments";
 import SideVideosList from "../SideVideosList/SideVideosList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { api_key, api_url } from "../../utils";
 
 const Main = () => {
   const [currVideo, setCurrVideo] = useState(videosData[0]);
@@ -13,6 +15,16 @@ const Main = () => {
     const current = videosData.find((video) => video.id === id);
     setCurrVideo(current);
   };
+
+  useEffect(() => {
+    axios.get(`${api_url}/videos/?api_key=${api_key}`)
+    .then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  })
 
   return (
     <main className="main">
