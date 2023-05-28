@@ -22,6 +22,11 @@
     list-style: none;
   }
 
+  &__link {
+    text-decoration: none;
+    color: $brainflix-black;
+  }
+
   @include desktop {
     padding: 0 1.2vw 0 1.8vw;
     width: 39%;

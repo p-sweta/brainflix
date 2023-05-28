@@ -18,7 +18,9 @@ const Main = () => {
   // };
 
   const [videosData, setVideosData] = useState([]);
-  const selectedVideo = videosData.length ? videosData[0].id : null;
+  const firstVideo = videosData.length ? videosData[0].id : null;
+
+  const selectedVideo = videoId ? videoId : firstVideo;
 
   useEffect(() => {
     axios.get(`${api_url}/videos?api_key=${api_key}`)
@@ -54,8 +56,6 @@ const Main = () => {
 
   return (
     <>
-    {
-      selectedVideo ? (
      
     <main className="main">
       
@@ -69,14 +69,11 @@ const Main = () => {
         <SideVideosList
           videosData={videosData}
           currVideo={currVideo}
-          // setCurrVideo={setCurrVideo}
+          setCurrVideo={setCurrVideo}
           // changeCurrVideo={changeCurrVideo}
         />
       </div>
     </main>
-      ) : (
-        <p>Loading...</p>
-      )}
       </>
   );
 };
