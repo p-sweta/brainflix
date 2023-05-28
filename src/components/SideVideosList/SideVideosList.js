@@ -1,25 +1,30 @@
 import "./SideVideosList.scss";
 import VideoCard from "../VideoCard/VideoCard";
+import { NavLink } from "react-router-dom";
 
-const SideVideosList = ({ currVideo, data, changeCurrVideo, setCurrVideo }) => {
+const SideVideosList = ({ videosData, currVideo }) => {
   return (
     <aside className="videolist">
       <h3 className="videolist__heading section__heading">NEXT VIDEOS</h3>
-      <section className="videolist__videos">
-        {data.map((video) => {
+      <ul className="videolist__videos">
+        {videosData.map((video) => {
           if (video !== currVideo) {
             return (
+              <NavLink to={`/video/${video.id}`}>
+              <li className="videolist__item" 
+              key={video.id}>
               <VideoCard
-                key={video.id}
                 title={video.title}
                 channel={video.channel}
                 image={video.image}
-                handleSelect={() => changeCurrVideo(video.id)}
+                // handleSelect={() => changeCurrVideo(video.id)}
               />
+              </li>
+              </NavLink>
             );
           }
         })}
-      </section>
+      </ul>
     </aside>
   );
 };

@@ -2,7 +2,7 @@ import "./Comments.scss";
 import CommentsForm from "../CommentsForm/CommentsForm";
 import Comment from "../Comment/Comment";
 
-const Comments = ({ currVideo }) => {
+const Comments = ({currVideo}) => {
   return (
     <div className="comments">
       <h3 className="comments__count">{currVideo.comments.length} Comments</h3>

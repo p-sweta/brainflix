@@ -18,6 +18,10 @@
     }
   }
 
+  &__item {
+    list-style: none;
+  }
+
   @include desktop {
     padding: 0 1.2vw 0 1.8vw;
     width: 39%;
