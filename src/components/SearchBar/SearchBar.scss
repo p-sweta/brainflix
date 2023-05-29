@@ -41,8 +41,8 @@
     }
 
     @include desktop {
-      width: 80%;
-      margin: 1.2vw 0 0 2vw;
+      width: 78%;
+      margin: 1.2vw 0 0 3.5vw;
     }
   }
 
@@ -78,7 +78,8 @@
     }
 
     @include desktop {
-      margin: 1.2vw 6.5vw 0 0;
+      margin: 1.2vw 3vw 0 0;
+      width: 68%;
     }
   }
 
@@ -100,11 +101,12 @@
 
     @include desktop {
       top: 1.2vw;
-      right: 0.5vw;
+      right: 0;
     }
   }
 
   @include desktop {
     justify-content: flex-end;
+    width: 75%;
   }
 }
