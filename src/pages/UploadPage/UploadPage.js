@@ -1,9 +1,10 @@
+import UploadForm from "../../components/UploadForm/UploadForm";
 
 const UploadPage = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <UploadForm />
+        </>
     );
 };
 
