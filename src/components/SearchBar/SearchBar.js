@@ -2,6 +2,7 @@ import "./SearchBar.scss";
 import search from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import upload from "../../assets/icons/upload.svg";
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   return (
@@ -20,6 +21,7 @@ const SearchBar = () => {
           </div>
         </div>
       </form>
+      <Link to="/upload" className="link">
       <button className="searchbar__upload-container btn">
         <img
           className="searchbar__upload-icon btn__icon"
@@ -28,6 +30,7 @@ const SearchBar = () => {
         />
         <h3 className="searchbar__upload-text btn__text">UPLOAD</h3>
       </button>
+      </Link>
       <img
         className="searchbar__avatar"
         src={avatar}

@@ -10,12 +10,7 @@ import { api_key, api_url } from "../../utils";
 import { useParams } from "react-router-dom";
 
 const Main = () => {
-
   const { videoId } = useParams();
-  // const changeCurrVideo = (id) => {
-  //   const current = videosData.find((video) => video.id === id);
-  //   setCurrVideo(current);
-  // };
 
   const [videosData, setVideosData] = useState([]);
   const firstVideo = videosData.length ? videosData[0].id : null;
@@ -23,58 +18,56 @@ const Main = () => {
   const selectedVideo = videoId ? videoId : firstVideo;
 
   useEffect(() => {
-    axios.get(`${api_url}/videos?api_key=${api_key}`)
-    .then((res) => {
-      setVideosData(res.data);
-      console.log(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-  }, [])
+    axios
+      .get(`${api_url}/videos?api_key=${api_key}`)
+      .then((res) => {
+        setVideosData(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const [currVideo, setCurrVideo] = useState(null);
 
   // console.log(videosData[0].id);
 
   useEffect(() => {
-    axios.get(`${api_url}/videos/${selectedVideo}?api_key=${api_key}`)
-    .then((res) => {
-      setCurrVideo(res.data);
-      console.log(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+    axios
+      .get(`${api_url}/videos/${selectedVideo}?api_key=${api_key}`)
+      .then((res) => {
+        setCurrVideo(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [selectedVideo]);
 
   if (!currVideo) {
-    return (
-      <p>Loading...</p>
-    )
+    return <p>Loading...</p>;
   }
 
   return (
     <>
-     
-    <main className="main">
-      
-      <Video currVideo = {currVideo} /> 
-      <div className="details-container">
-        <div className="details-container__left">
-           <VideoDetails currVideo = {currVideo}/> 
-          <Comments currVideo = {currVideo}/>  
+      <main className="main">
+        <Video currVideo={currVideo} />
+        <div className="details-container">
+          <div className="details-container__left">
+            <VideoDetails currVideo={currVideo} />
+            <Comments currVideo={currVideo} />
+          </div>
+
+          <SideVideosList
+            videosData={videosData}
+            currVideo={currVideo}
+            setCurrVideo={setCurrVideo}
+            // changeCurrVideo={changeCurrVideo}
+          />
         </div>
-      
-        <SideVideosList
-          videosData={videosData}
-          currVideo={currVideo}
-          setCurrVideo={setCurrVideo}
-          // changeCurrVideo={changeCurrVideo}
-        />
-      </div>
-    </main>
-      </>
+      </main>
+    </>
   );
 };
 

@@ -58,7 +58,7 @@ const UploadForm = () => {
             <img className="upload__icon btn__icon" src={publish} alt="add-comment-icon" />
             <h3 className="upload__btn-text btn__text">PUBLISH</h3>
           </button>
-          <Link className="upload__cancel" to="/">CANCEL</Link>
+          <Link className="upload__cancel link" to="/">CANCEL</Link>
         </div>
       </form>
     </section>
