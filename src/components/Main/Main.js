@@ -1,7 +1,6 @@
 import "./Main.scss";
 import Video from "../Video/Video";
 import VideoDetails from "../VideoDetails/VideoDetails";
-// import videosData from "../../data/video-details.json";
 import Comments from "../Comments/Comments";
 import SideVideosList from "../SideVideosList/SideVideosList";
 import { useState, useEffect } from "react";
@@ -22,7 +21,6 @@ const Main = () => {
       .get(`${api_url}/videos?api_key=${api_key}`)
       .then((res) => {
         setVideosData(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -31,14 +29,11 @@ const Main = () => {
 
   const [currVideo, setCurrVideo] = useState(null);
 
-  // console.log(videosData[0].id);
-
   useEffect(() => {
     axios
       .get(`${api_url}/videos/${selectedVideo}?api_key=${api_key}`)
       .then((res) => {
         setCurrVideo(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -63,7 +58,6 @@ const Main = () => {
             videosData={videosData}
             currVideo={currVideo}
             setCurrVideo={setCurrVideo}
-            // changeCurrVideo={changeCurrVideo}
           />
         </div>
       </main>

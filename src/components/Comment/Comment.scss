@@ -4,11 +4,10 @@
 
 .comment {
   margin: 0;
-  // border-top: 1px solid $mercury;
 
   &__container {
     display: flex;
-    border-top: 1px solid $mercury;
+    border-bottom: 1px solid $mercury;
     margin-bottom: -0.06rem;
     position: relative;
 
@@ -19,6 +18,8 @@
 
     @include desktop {
       padding: 0 1vw;
+      border-bottom: none;
+      border-top: 1px solid $mercury;
     }
   }
 
@@ -108,6 +109,5 @@
 
   @include tablet {
     padding: 0;
-    // margin-top: 2vw;
   }
 }

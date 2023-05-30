@@ -2,15 +2,12 @@ import "./UploadForm.scss";
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publish from "../../assets/icons/publish.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 const UploadForm = () => {
-  // const [submit, setSubmit] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
-    // setSubmit(true);
     alert("Upload Successful!!");
     navigate("/");
   };
@@ -18,7 +15,7 @@ const UploadForm = () => {
   return (
     <section className="upload">
       <h2 className="upload__heading">Upload Video</h2>
-      <form className="upload__form" id="upload__form" onSubmit={handleSubmit}>
+      <form className="upload__form" id="upload__form" onSubmit={handleOnSubmit}>
         <div className="upload__container">
           <div className="upload__image-container">
             <h3 className="upload__subheading section__heading">

@@ -10,7 +10,7 @@ const SearchBar = () => {
       <form className="searchbar__form">
         <div className="searchbar__container">
           <div className="searchbar__icon-container">
-            <img className="searchbar__search-icon" src={search} alt="" />
+            <img className="searchbar__search-icon" src={search} alt="serach-icon" />
             <label htmlFor="searchbar"></label>
             <input
               className="searchbar__input"

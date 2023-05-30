@@ -7,7 +7,11 @@ const CommentsForm = () => {
     <section className="conversation">
       <form id="comment-form" className="form">
         <div className="form__image-container">
-          <img className="form__image" src={avatar} alt="mohan-muruge-avatar" />
+          <img
+            className="form__image"
+            src={avatar}
+            alt="profile-pic-avatar"
+          />
         </div>
 
         <div className="form__container">
