@@ -17,27 +17,37 @@ const Main = () => {
   const selectedVideo = videoId ? videoId : firstVideo;
 
   useEffect(() => {
-    axios
-      .get(`${api_url}/videos?api_key=${api_key}`)
-      .then((res) => {
-        setVideosData(res.data);
-      })
-      .catch((err) => {
+    const getData = async () => {
+      try {
+        const videoDataResponse = await axios.get(
+          `${api_url}/videos?api_key=${api_key}`
+        );
+        setVideosData(videoDataResponse.data);
+      } catch (err) {
         console.log(err);
-      });
+      }
+    };
+
+    getData();
   }, []);
 
   const [currVideo, setCurrVideo] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${api_url}/videos/${selectedVideo}?api_key=${api_key}`)
-      .then((res) => {
-        setCurrVideo(res.data);
-      })
-      .catch((err) => {
+    const fetchData = async () => {
+      try {
+        if (selectedVideo) {
+          const videoResponse = await axios.get(
+            `${api_url}/videos/${selectedVideo}?api_key=${api_key}`
+          );
+          setCurrVideo(videoResponse.data);
+        }
+      } catch (err) {
         console.log(err);
-      });
+      }
+    };
+
+    fetchData();
   }, [selectedVideo]);
 
   if (!currVideo) {
