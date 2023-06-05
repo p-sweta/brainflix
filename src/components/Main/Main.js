@@ -5,8 +5,9 @@ import Comments from "../Comments/Comments";
 import SideVideosList from "../SideVideosList/SideVideosList";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { api_key, api_url } from "../../utils";
 import { useParams } from "react-router-dom";
+
+const api_url = "http://localhost:8080";
 
 const Main = () => {
   const { videoId } = useParams();
@@ -20,7 +21,7 @@ const Main = () => {
     const getData = async () => {
       try {
         const videoDataResponse = await axios.get(
-          `${api_url}/videos?api_key=${api_key}`
+          `${api_url}/videos`
         );
         setVideosData(videoDataResponse.data);
       } catch (err) {
@@ -38,7 +39,7 @@ const Main = () => {
       try {
         if (selectedVideo) {
           const videoResponse = await axios.get(
-            `${api_url}/videos/${selectedVideo}?api_key=${api_key}`
+            `${api_url}/videos/${selectedVideo}`
           );
           setCurrVideo(videoResponse.data);
         }
