@@ -7,10 +7,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const api_url = "http://localhost:8080";
-
 const Main = () => {
   const { videoId } = useParams();
+  const api_url = "http://localhost:8080";
 
   const [videosData, setVideosData] = useState([]);
   const firstVideo = videosData.length ? videosData[0].id : null;

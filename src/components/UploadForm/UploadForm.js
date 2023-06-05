@@ -2,14 +2,33 @@ import "./UploadForm.scss";
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publish from "../../assets/icons/publish.svg";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const UploadForm = () => {
+  const api_url = "http://localhost:8080";
   const navigate = useNavigate();
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    alert("Upload Successful!!");
-    navigate("/");
+
+    const title = e.target.title.value;
+    const description = e.target.description.value;
+
+    axios.post (`${api_url}/videos`, {
+      title: title,
+      description: description,
+      timestamp: Date.now()
+    })
+    .then ((res) => {
+      alert("Upload Successful!!");
+      navigate("/");
+    })
+    .catch ((err) => {
+      console.log(err);
+    });
+
+    
   };
 
   return (
