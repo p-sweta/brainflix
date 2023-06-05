@@ -1,5 +1,5 @@
-import "./Comment.scss";
 import { date } from "../../utils";
+import "./Comment.scss";
 
 const Comment = ({ comment }) => {
   return (

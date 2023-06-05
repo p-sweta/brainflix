@@ -89,7 +89,8 @@
     resize: none;
     overflow: hidden;
 
-    &::placeholder {
+    &::placeholder,
+    &:valid {
       color: $brainflix-black;
       font-family: avenir;
       font-weight: 400;

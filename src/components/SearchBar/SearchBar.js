@@ -1,8 +1,8 @@
-import "./SearchBar.scss";
+import { Link } from "react-router-dom";
 import search from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import upload from "../../assets/icons/upload.svg";
-import { Link } from "react-router-dom";
+import "./SearchBar.scss";
 
 const SearchBar = () => {
   return (
@@ -10,7 +10,11 @@ const SearchBar = () => {
       <form className="searchbar__form">
         <div className="searchbar__container">
           <div className="searchbar__icon-container">
-            <img className="searchbar__search-icon" src={search} alt="serach-icon" />
+            <img
+              className="searchbar__search-icon"
+              src={search}
+              alt="serach-icon"
+            />
             <label htmlFor="searchbar"></label>
             <input
               className="searchbar__input"
@@ -22,14 +26,14 @@ const SearchBar = () => {
         </div>
       </form>
       <Link to="/upload" className="link">
-      <button className="searchbar__upload-container btn">
-        <img
-          className="searchbar__upload-icon btn__icon"
-          src={upload}
-          alt="upload-icon"
-        />
-        <h3 className="searchbar__upload-text btn__text">UPLOAD</h3>
-      </button>
+        <button className="searchbar__upload-container btn">
+          <img
+            className="searchbar__upload-icon btn__icon"
+            src={upload}
+            alt="upload-icon"
+          />
+          <h3 className="searchbar__upload-text btn__text">UPLOAD</h3>
+        </button>
       </Link>
       <img
         className="searchbar__avatar"

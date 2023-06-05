@@ -1,7 +1,7 @@
-import "./VideoDetails.scss";
+import { date } from "../../utils";
 import viewIcon from "../../assets/icons/views.svg";
 import likeIcon from "../../assets/icons/likes.svg";
-import { date } from "../../utils";
+import "./VideoDetails.scss";
 
 const VideoDetails = ({ currVideo }) => {
   return (

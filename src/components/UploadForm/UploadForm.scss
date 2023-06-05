@@ -80,7 +80,7 @@
     border: $mercury 1px solid;
     background-color: $alabaster;
 
-    &::placeholder {
+    &::placeholder, &:valid {
       color: $brainflix-black;
       font-family: avenir;
       font-weight: 400;
@@ -113,7 +113,7 @@
     resize: none;
     overflow: hidden;
 
-    &::placeholder {
+    &::placeholder, &:valid {
       color: $brainflix-black;
       font-family: avenir;
       font-weight: 400;

@@ -1,17 +1,13 @@
-import "./CommentsForm.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addComment from "../../assets/icons/add_comment.svg";
+import "./CommentsForm.scss";
 
 const CommentsForm = () => {
   return (
     <section className="conversation">
       <form id="comment-form" className="form">
         <div className="form__image-container">
-          <img
-            className="form__image"
-            src={avatar}
-            alt="profile-pic-avatar"
-          />
+          <img className="form__image" src={avatar} alt="profile-pic-avatar" />
         </div>
 
         <div className="form__container">

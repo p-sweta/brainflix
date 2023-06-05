@@ -1,9 +1,8 @@
-import "./UploadForm.scss";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publish from "../../assets/icons/publish.svg";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-
+import "./UploadForm.scss";
 
 const UploadForm = () => {
   const api_url = "http://localhost:8080";
@@ -15,26 +14,29 @@ const UploadForm = () => {
     const title = e.target.title.value;
     const description = e.target.description.value;
 
-    axios.post (`${api_url}/videos`, {
-      title: title,
-      description: description,
-      timestamp: Date.now()
-    })
-    .then ((res) => {
-      alert("Upload Successful!!");
-      navigate("/");
-    })
-    .catch ((err) => {
-      console.log(err);
-    });
-
-    
+    axios
+      .post(`${api_url}/videos`, {
+        title: title,
+        description: description,
+        timestamp: Date.now(),
+      })
+      .then((res) => {
+        alert("Upload Successful!!");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
     <section className="upload">
       <h2 className="upload__heading">Upload Video</h2>
-      <form className="upload__form" id="upload__form" onSubmit={handleOnSubmit}>
+      <form
+        className="upload__form"
+        id="upload__form"
+        onSubmit={handleOnSubmit}
+      >
         <div className="upload__container">
           <div className="upload__image-container">
             <h3 className="upload__subheading section__heading">
@@ -57,6 +59,7 @@ const UploadForm = () => {
               name="title"
               id="title"
               placeholder="Add a title to your video"
+              required
             />
             <br />
             <label
@@ -71,7 +74,7 @@ const UploadForm = () => {
               name="description"
               id="description"
               placeholder="Add a description to your video"
-              // required
+              required
             ></textarea>
           </div>
         </div>

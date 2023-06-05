@@ -1,6 +1,6 @@
-import "./SideVideosList.scss";
-import VideoCard from "../VideoCard/VideoCard";
 import { NavLink } from "react-router-dom";
+import VideoCard from "../VideoCard/VideoCard";
+import "./SideVideosList.scss";
 
 const SideVideosList = ({ videosData, currVideo }) => {
   return (

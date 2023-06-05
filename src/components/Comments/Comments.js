@@ -1,6 +1,6 @@
-import "./Comments.scss";
 import CommentsForm from "../CommentsForm/CommentsForm";
 import Comment from "../Comment/Comment";
+import "./Comments.scss";
 
 const Comments = ({ currVideo }) => {
   return (
